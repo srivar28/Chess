@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <a href="#">
+        <img src="../images/logo.png" alt="Chess" width="100" height="150" class="d-block mx-auto">
+    </a>
+    <h2 class="text-center">Create an Account</h2>
+    <form class="mx-auto" style="max-width: 420px; padding: 1.25rem;" method="POST" action='/api/auth/signup'>
+        <div class="mb-3">
+            <label for="usernameInput" class="form-label">User Name</label>
+            <input type="text" class="form-control" name="username" id="usernameInput" aria-describedby="usernameHelp"
+                autocomplete="username" required>
+            <div id="usernameHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="newPassword" class="form-control" id="password" autocomplete="new-password"
+                minlength="8" required>
+            <div class="form-text">At least 8 characters.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" required>
+            <div class="invalid-feedback">Passwords do not match.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div id="signupMsg" role="alert" class="text-danger small mt-2" style="display:none"></div>
+
+
+        <div class="text-center mt-3">
+            <span class="text-muted me-1">Already Have an Account?</span>
+            <a class="link-primary text-decoration-none" href="/login.html">Login</a>
+        </div>
+    </form>
+    <script type="module" src="/js/signup.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-7gq9M0dS8zF5U0X0K0qC1wH7V8kH3q0qJ2UeQHkQ4cU0i2v5s1" crossorigin="anonymous"></script>
+</body>
+
+</html>

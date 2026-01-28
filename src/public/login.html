@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="layout">
+    <div id="sidebar"></div>
+    <main class="main p-4">
+      <p class="h3">Login</p>
+
+
+      <!-- Bootstrap Code -->
+      <form class="mx-auto" style="max-width: 420px; padding: 1.25rem;" method="POST" action="/api/auth/login">
+        <div class="mb-3">
+          <label for="usernameInput" class="form-label">User Name</label>
+          <input type="text" class="form-control" name="username" id="usernameInput" aria-describedby="usernameHelp"
+            autocomplete="username" required>
+          <div id="usernameHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+            autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div id="loginMsg" role="alert" class="text-danger small mt-2" style="display:none"></div>
+
+
+        <div class="text-center mt-3">
+          <span class="text-muted me-1">First Time?</span>
+          <a class="link-primary text-decoration-none" href="/signup.html">Create an account</a>
+        </div>
+
+
+      </form>
+      <!-- Bootstrap Code -->
+
+    </main>
+  </div>
+  <script src="/js/sidebar.js" type="module"></script>
+  <script type="module" src="/js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-7gq9M0dS8zF5U0X0K0qC1wH7V8kH3q0qJ2UeQHkQ4cU0i2v5s1" crossorigin="anonymous"></script>
+</body>
+
+</html>

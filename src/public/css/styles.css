@@ -1,0 +1,124 @@
+html,
+body {
+    height: 100%;
+}
+
+/* Custom Bootstrap Theme */
+
+:root[data-bs-theme="dark"] {
+    --bs-body-bg: #020617;
+    --bs-body-color: #e2e8f0;
+
+    --bs-secondary: #64748b;
+    --bs-success: #22c55e;
+    --bs-warning: #eab308;
+    --bs-danger: #ef4444;
+
+    --bs-border-color: #1f2937;
+    --bs-card-bg: #020617;
+    --bs-card-border-color: #1f2937;
+    --bs-card-color: var(--bs-body-color);
+
+    --bs-gray-200: #5f8ac7;
+    --bs-success-bg-subtle: #066e53;
+}
+
+[data-bs-theme="dark"] .bg-light {
+    background-color: #020617 !important;
+}
+
+[data-bs-theme="dark"] .border-end {
+    border-color: var(--bs-border-color) !important;
+}
+
+[data-bs-theme="dark"] .nav-link {
+    color: var(--bs-body-color);
+}
+
+[data-bs-theme="dark"] .nav-link.active,
+[data-bs-theme="dark"] .nav-link:hover {
+    background-color: var(--bs-primary);
+    color: #0f172a;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+#sidebar {
+    flex: 0 0 260px;
+    color: #1f2937;
+}
+
+.main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.placeholder-board {
+    border: 2px dashed #adb5bd;
+    border-radius: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #6c757d;
+    user-select: none;
+}
+
+#chessboard {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--bs-border-color);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.square {
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.square:focus-visible {
+    outline: 2px solid #0d6efd;
+    outline-offset: -2px;
+}
+
+.square {
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square.light {
+    background: var(--bs-gray-200);
+}
+
+.square.dark {
+    background: var(--bs-success-bg-subtle, #d1e7dd);
+}
+
+.piece {
+    font-family: "Noto Sans Symbols 2", "DejaVu Sans", "Segoe UI Symbol", "Apple Symbols", "Symbola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    color: #000;
+}
+
+.square.selected {
+    box-shadow: inset 0 0 0 3px #ffc107;
+}
+
+#userCaptured,
+#opponentCaptured {
+    font-family: "Noto Sans Symbols 2", "DejaVu Sans", "Segoe UI Symbol", "Apple Symbols", "Symbola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    font-size: 1.2rem;
+}

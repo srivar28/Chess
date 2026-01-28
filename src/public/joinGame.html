@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout">
+        <div id="sidebar"></div>
+
+        <main class="main p-4">
+
+            <h2 class="h4 mb-3">Join Game</h2>
+            <form class="mx-auto" style="max-width: 420px; padding: 1.25rem;" method="POST" action="/api/joinGame">
+                <fieldset>
+                    <div class="mb-3">
+                        <label for="gameCode" class="form-label">Enter Game Code</label>
+                        <input type="text" class="form-control" name="gameCode" id="gameCode"
+                            aria-describedby="gameCodeHelp" required autocapitalize="off" spellcheck="false">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Join Game</button>
+                </fieldset>
+
+                <div id="joinMsg" class="text-danger small mt-2" role="alert" aria-live="polite" style="display:none">
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="/js/sidebar.js" type="module"></script>
+    <script type="module" src="/js/joinGame.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
