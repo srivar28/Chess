@@ -5,6 +5,9 @@
 
 Two player chess. Uses a game code to so players can join the same session. The server is authoritative for move legality and clocks. 
 
+
+## [Link to App](https://final-project-srivar28.onrender.com/login.html)
+
 ## Data Model
 
 The app stores Games with embedded Moves.
